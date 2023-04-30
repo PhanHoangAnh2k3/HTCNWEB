@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Đăng ký</title>
+    <meta charset="UTF-8">
+    <style>
+      form {
+        margin: 0 auto;
+        width: 300px;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type=text], input[type=password] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+      }
+      input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Đăng ký</h1>
+    <form id="registerForm" onsubmit="return checkRegister()">
+      <label for="username">Tên đăng nhập:</label>
+      <input type="text" id="newUsername" name="newUsername">
+
+      <label for="newPassword">Mật khẩu:</label>
+      <input type="password" id="newPassword" name="newPassword">
+
+      <input type="submit" value="Đăng ký">
+    </form>  
+    <script>
+      function showRegister() {
+        document.getElementById("registerForm").style.display = "block";
+      }
+
+      function checkRegister() {
+        var newUsername = document.getElementById("newUsername").value;
+        var newPassword = document.getElementById("newPassword").value;
+        if (newUsername == "" || newPassword == "") {
+          alert("Vui lòng nhập đầy đủ thông tin đăng ký.");
+return false;
+}
+else {
+// Lưu thông tin đăng ký của người dùng ở đây.
+alert("Đăng ký thành công!");
+return true;
+}
+}
+</script>
+
+  </body>
+</html>

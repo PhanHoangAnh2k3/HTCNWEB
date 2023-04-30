@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trang thanh toán</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f2f2f2;
+		}
+
+		.container {
+			width: 80%;
+			margin: auto;
+			background-color: #fff;
+			padding: 20px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		}
+
+		h1 {
+			text-align: center
+        }
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    font-size: 16px;
+    width: 100%;
+    max-width: 500px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 500px;
+}
+</style>
+
+</head>
+<body>
+	<div class="container">
+		<h1>Thanh toán</h1>
+		<form action="xulythantoan.php" method="POST">
+			<label for="name"><b>Tên chủ thẻ:</b></label>
+			<input type="text" id="name" name="name" placeholder="Nhập tên chủ thẻ">
+
+            <label for="card-number"><b>Số thẻ:</b></label>
+            <input type="text" id="card-number" name="card-number" placeholder="Nhập số thẻ">
+    
+            <label for="expiry"><b>Ngày hết hạn:</b></label>
+            <input type="text" id="expiry" name="expiry" placeholder="Nhập ngày hết hạn">
+    
+            <label for="cvv"><b>Mã CVV:</b></label>
+             <input type="text" id="cvv" name="cvv" placeholder="Nhập mã CVV">
+    
+            <label for="address"><b>Địa chỉ thanh toán:</b></label>
+            <input type="text" id="address" name="address" placeholder="Nhập địa chỉ thanh toán">
+    
+            <label for="amount"><b>Số tiền thanh toán:</b></label>
+            <input type="text" id="amount" name="amount" placeholder="Nhập số tiền thanh toán">
+    
+            <button type="submit">Thanh toán</button>
+        </form>
+    </div>
+</body>
+</html>    
